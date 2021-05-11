@@ -2,9 +2,9 @@ from time import sleep
 import cv2
 import sys
 from threading import Timer,Thread,Event
-from PyQt5.QtCore import QThread
-from PyQt5.QtWidgets import QApplication,QMainWindow,QFileDialog,QVBoxLayout
-from PyQt5 import QtGui, QtCore ,QtWidgets
+from qtpy.QtCore import QThread
+from qtpy.QtWidgets import QApplication,QMainWindow,QFileDialog,QVBoxLayout
+from qtpy import QtGui, QtCore ,QtWidgets
 
 from MainForm import Ui_MainWindow
 import numpy as np
@@ -36,7 +36,7 @@ class perpetualTimer():
 
 
 class workerThread2(QThread):
-    #updatedLine = QtCore.pyqtSignal(int)
+    #updatedLine = QtCore.Signal(int)
     def __init__(self,mw):
         self.mw=mw
         QThread.__init__(self)
@@ -79,7 +79,7 @@ class workerThread2(QThread):
 
 class workerThread(QThread):
         
-    updatedM = QtCore.pyqtSignal(int)
+    updatedM = QtCore.Signal(int)  # pyqtSignal in PyQt5 Signal in qtpy
 
     
 
@@ -138,8 +138,8 @@ class workerThread(QThread):
 
 class MainForm(QMainWindow):
 
-    resized = QtCore.pyqtSignal()
-    #keypressed = QtCore.pyqtSignal()
+    resized = QtCore.Signal()
+    #keypressed = QtCore.Signal()
 
     def __init__(self):
         super(MainForm,self).__init__()
