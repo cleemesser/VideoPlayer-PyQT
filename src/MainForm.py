@@ -8,6 +8,7 @@
 
 from qtpy import QtCore, QtGui, QtWidgets
 
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -29,7 +30,9 @@ class Ui_MainWindow(object):
         self.verticalLayout.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
         self.verticalLayout.setObjectName("verticalLayout")
         self.frame_3 = QtWidgets.QFrame(self.groupBox_5)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_3.sizePolicy().hasHeightForWidth())
@@ -42,7 +45,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.frame_3)
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
         self.timeComboBox = QtWidgets.QComboBox(self.frame_3)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Expanding
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.timeComboBox.sizePolicy().hasHeightForWidth())
@@ -55,7 +60,9 @@ class Ui_MainWindow(object):
         self.fileButton = QtWidgets.QPushButton(self.frame_3)
         self.fileButton.setFocusPolicy(QtCore.Qt.NoFocus)
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("datafile.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(
+            QtGui.QPixmap("datafile.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off
+        )
         self.fileButton.setIcon(icon1)
         self.fileButton.setObjectName("fileButton")
         self.horizontalLayout_4.addWidget(self.fileButton)
@@ -63,7 +70,9 @@ class Ui_MainWindow(object):
         self.openButton.setEnabled(False)
         self.openButton.setFocusPolicy(QtCore.Qt.NoFocus)
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("icons8-unsplash-64.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(
+            QtGui.QPixmap("icons8-unsplash-64.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off
+        )
         self.openButton.setIcon(icon2)
         self.openButton.setObjectName("openButton")
         self.horizontalLayout_4.addWidget(self.openButton)
@@ -71,7 +80,9 @@ class Ui_MainWindow(object):
         self.startButton.setEnabled(False)
         self.startButton.setFocusPolicy(QtCore.Qt.NoFocus)
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("icons8-start-40.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(
+            QtGui.QPixmap("icons8-start-40.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off
+        )
         self.startButton.setIcon(icon3)
         self.startButton.setObjectName("startButton")
         self.horizontalLayout_4.addWidget(self.startButton)
@@ -79,7 +90,11 @@ class Ui_MainWindow(object):
         self.pauseButton.setEnabled(True)
         self.pauseButton.setFocusPolicy(QtCore.Qt.NoFocus)
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("icons8-pause-button-48.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(
+            QtGui.QPixmap("icons8-pause-button-48.png"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         self.pauseButton.setIcon(icon4)
         self.pauseButton.setObjectName("pauseButton")
         self.horizontalLayout_4.addWidget(self.pauseButton)
@@ -90,7 +105,9 @@ class Ui_MainWindow(object):
         self.line.setObjectName("line")
         self.verticalLayout.addWidget(self.line)
         self.LeftImage = QtWidgets.QLabel(self.groupBox_5)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.LeftImage.sizePolicy().hasHeightForWidth())
@@ -105,7 +122,9 @@ class Ui_MainWindow(object):
         self.line_2.setObjectName("line_2")
         self.verticalLayout.addWidget(self.line_2)
         self.bottomImage = QtWidgets.QLabel(self.groupBox_5)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.bottomImage.sizePolicy().hasHeightForWidth())
@@ -116,7 +135,9 @@ class Ui_MainWindow(object):
         self.bottomImage.setObjectName("bottomImage")
         self.verticalLayout.addWidget(self.bottomImage)
         self.frame = QtWidgets.QFrame(self.groupBox_5)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame.sizePolicy().hasHeightForWidth())
@@ -158,4 +179,3 @@ class Ui_MainWindow(object):
         self.openButton.setText(_translate("MainWindow", "Open Video"))
         self.startButton.setText(_translate("MainWindow", "Start"))
         self.pauseButton.setText(_translate("MainWindow", "Pause"))
-
